@@ -1,1 +1,4 @@
-ython manage.py runserver 8080
+python manage.py runserver 8080
+
+
+https://medium.com/@devsumitg/recipe-crud-project-using-the-django-framework-bootstrap-5-3160ec5b43aa
