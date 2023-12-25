@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Recipes</h1>
+  <div class="row row-cols-2 row-cols-lg-4 g-sm-2 g-lg-2 mb-4">
+    {% for menu in menus %}
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="{{ recipe.image.url }}" class="card-img-top" alt="{{ recipe.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ menu.name }}</h5>
+          <p class="card-text">{{ menu.description|truncatechars:40 }}</p>
+          <a href="{% url 'recipe_detail' recipe.id %}" class="btn btn-dark">View Recipe</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
